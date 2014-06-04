@@ -15,7 +15,7 @@ public class RectangleMan extends Component implements KeyEventDispatcher,
 	private int vY;
 
 	public void initialize() {
-		setSize(40, 40);
+		setSize(30, 30);
 		
 		KeyboardFocusManager.getCurrentKeyboardFocusManager()
 				.addKeyEventDispatcher(this);
@@ -29,11 +29,11 @@ public class RectangleMan extends Component implements KeyEventDispatcher,
 	public void paint(Graphics g) {
 		Graphics2D g2 = (Graphics2D) g;
 
-		g2.setColor(Color.RED);
+		g2.setColor(Color.MAGENTA);
 		g2.fillRect(0, 0, getWidth() - 1, getHeight() - 1);
 
-		g2.setColor(Color.GREEN);
-		g2.drawRect(0, 0, getWidth() - 1, getHeight() - 1);
+		g2.setColor(Color.BLUE);
+		g2.drawRect(0, 0, getWidth() - 2, getHeight() - 2);
 
 		super.paint(g);
 	}
@@ -53,6 +53,12 @@ public class RectangleMan extends Component implements KeyEventDispatcher,
 
 			if (e.getKeyCode() == KeyEvent.VK_D) {
 				vX = 1;
+			}
+			if (e.getKeyCode() == KeyEvent.VK_W) {
+				vY = -1;
+			}
+			if (e.getKeyCode() == KeyEvent.VK_S) {
+				vY = 1;
 			}
 		}
 
