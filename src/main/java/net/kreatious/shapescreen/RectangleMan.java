@@ -33,7 +33,7 @@ public class RectangleMan extends Component implements KeyEventDispatcher,
 		g2.fillRect(0, 0, getWidth() - 1, getHeight() - 1);
 
 		g2.setColor(Color.BLUE);
-		g2.drawRect(0, 0, getWidth() - 2, getHeight() - 2);
+		g2.drawRect(0, 0, getWidth() - 1, getHeight() - 1);
 
 		super.paint(g);
 	}

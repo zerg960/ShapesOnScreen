@@ -33,8 +33,15 @@ public class WaffleMan extends Component implements KeyEventDispatcher,
 		g2.fillRect(0, 0, getWidth() - 1, getHeight() - 1);
 
 		g2.setColor(Color.BLUE);
-		g2.drawRect(0, 0, getWidth() - 2, getHeight() - 2);
+		g2.drawRect(0, 0, getWidth() - 1, getHeight() - 1);
 
+		final int WAFFLE_LINES = 3;
+		for(int i = 0; i != WAFFLE_LINES; i++)
+		{
+			final int WAFFLE_X = (getWidth() - 1) / WAFFLE_LINES * i;
+			g2.drawLine(WAFFLE_X, 0, WAFFLE_X, getHeight() - 1);
+		}
+		
 		super.paint(g);
 	}
 
