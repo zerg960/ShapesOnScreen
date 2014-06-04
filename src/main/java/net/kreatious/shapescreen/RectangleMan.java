@@ -54,9 +54,11 @@ public class RectangleMan extends Component implements KeyEventDispatcher,
 			if (e.getKeyCode() == KeyEvent.VK_D) {
 				vX = 1;
 			}
+			
 			if (e.getKeyCode() == KeyEvent.VK_W) {
 				vY = -1;
 			}
+			
 			if (e.getKeyCode() == KeyEvent.VK_S) {
 				vY = 1;
 			}

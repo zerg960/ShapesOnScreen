@@ -16,7 +16,7 @@ public class WaffleMan extends Component implements KeyEventDispatcher,
 
 	public void initialize() {
 		setSize(30, 30);
-		
+
 		KeyboardFocusManager.getCurrentKeyboardFocusManager()
 				.addKeyEventDispatcher(this);
 		Main.addActor(this);
@@ -54,9 +54,11 @@ public class WaffleMan extends Component implements KeyEventDispatcher,
 			if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 				vX = 1;
 			}
+
 			if (e.getKeyCode() == KeyEvent.VK_UP) {
 				vY = -1;
 			}
+
 			if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 				vY = 1;
 			}
